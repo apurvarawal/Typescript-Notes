@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// import * as userlogin from "./interface";              ------------implementation of another way of importing
 class Employee {
     id;
     name;
@@ -12,6 +13,7 @@ john.address = "india";
 console.log(john);
 // Using Constructor in class
 class Employee1 {
+    // class Employee1 implements userlogin.login{                 --------------------------' '---------------------------
     id;
     name;
     address;
@@ -29,10 +31,10 @@ class Employee1 {
         return 40;
     }
     login() {
-        return john;
+        // login():loginuser{                                   ----------------------------' '----------------------
+        return { name: 'john', id: 2, address: 'delhi' };
     }
 }
-console.log(Employee1.login());
 // calling static member
 console.log(Employee1.getEmployeeCount());
 let alley = new Employee1(1, "Alley", "Delhi");
